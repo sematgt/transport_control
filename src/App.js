@@ -1,7 +1,7 @@
 import './App.css';
-import Header from './components/Header';
-import Navigation from './components/Navigation';
-import TransportControl from './components/TransportControl';
+import Header from './components/layout/Header';
+import Navigation from './components/layout/Navigation';
+import TransportControl from './components/TransportControl/TransportControl';
 
 function App() {
   const employees = {
