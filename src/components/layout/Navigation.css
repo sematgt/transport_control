@@ -1,0 +1,25 @@
+nav {
+    height: 38px;
+    box-shadow: 1px 0px 5px rgba(64, 59, 79, 0.5);
+    display: flex;
+    align-items: center;
+}
+
+nav .layers {
+    font-size: 15px;
+    font-weight: 500;
+    margin-left: 67px;
+    margin-right: 145px;
+    display: flex;
+    align-items: center;
+}
+
+nav .layers span {
+    margin-right: 8px;
+}
+
+nav .links .link{
+    font-size: 16px;
+    margin-left: 43px;
+    font-weight: 300;
+}
