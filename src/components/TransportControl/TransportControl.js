@@ -4,12 +4,15 @@ function TransportControl(props) {
     return (
         <section className="transportControl">
             <h1>Настройки</h1>
-            <EmployeesList
-                employeesData={props.drivers}
-            ></EmployeesList>
-            <EmployeesList
-                employeesData={props.conductors}
-            ></EmployeesList>
+            <div className="employeeLists">
+                <EmployeesList
+                    employeesData={props.drivers}
+                ></EmployeesList>
+                <hr></hr>
+                <EmployeesList
+                    employeesData={props.conductors}
+                ></EmployeesList>
+            </div>
         </section>
     );
 }

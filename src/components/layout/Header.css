@@ -1,0 +1,87 @@
+header {
+    background-color: #3C9372;
+    height: 50px;
+    display: flex;
+    justify-content: space-between;
+    color: #CBE6DC;
+    font-weight: 300;
+}
+
+header .left {
+    display: flex;  
+}
+
+header .right {
+    display: flex;  
+}
+
+header .left menu.sandwich {
+    display: flex;
+    background-color: #59B894;
+    width: 54px;
+    padding: 0px;
+    justify-content: center;
+    align-items: center;
+}
+
+header .left .logo {
+    display: flex;
+    align-items: center;
+    margin-left: 13px;
+}
+
+header .left .pageTitle {
+    margin-left: 105px;
+    font-size: 31px;
+    line-height: 36px;
+    display: flex;
+    align-items: center;
+}
+
+header .right .help {
+    display: flex;
+    align-items: center;
+    margin-right: 31px;
+}
+
+header .right .settings {
+    display: flex;
+    align-items: center;
+    margin-right: 25px;
+}
+
+header .right .login {
+    display: flex;
+    align-items: center;
+    margin-right: 35px;
+    font-size: 16px;
+}
+
+header .right .weather {
+    display: flex;
+    align-items: center;
+    margin-right: 27px;
+    font-size: 16px;
+    font-weight: 500;
+}
+
+header .right .weather .degree {
+    font-weight: 500; 
+    margin-left: 6px;
+}
+
+header .right .dateTime {
+    display: flex;
+    align-items: center;
+    margin-right: 126px;
+    font-size: 31px;
+}
+
+header .right .dateTime .date {
+    font-size: 12px;
+    display: flex;
+    flex-direction: column;
+    margin-left: 6px;
+}
+
+
