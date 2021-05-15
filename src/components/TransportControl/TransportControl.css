@@ -1,0 +1,12 @@
+.transportControl h1 {
+    font-size: 36px;
+    margin-top: 13px;
+    margin-left: 55px;
+    font-weight: 500;   
+}
+
+.transportControl .employeeLists {
+    margin-top: 43px;
+    margin-left: 42px;
+    margin-right: 110px;
+}

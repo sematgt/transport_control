@@ -1,3 +1,53 @@
-td.active {
+.employeeLists {
+    display: flex;
+    justify-content: space-between;
+}
+
+.employeeLists hr {
+    border: 0.5px solid #C4C4C4;
+}
+
+.employeesList .addMenu {
+    display: flex;
+    align-items: center;
+    margin-left: 13px;
+    margin-bottom: 59px;
+}
+
+.employeesList .addMenu img {
+    margin-left: 16px;
+}
+
+.employeesList table {
+    font-size: 18px;
+    font-weight: 300;
+}
+
+.employeesList table td {
+    padding: 7px 7px;
+    text-align: center;
+    vertical-align: middle;
+}
+
+.employeesList table td.employeeName {
+    text-align: left;
+} 
+
+.employeesList table td.active span{
     background-color: #E8E4F9;
+    border-radius: 5px;
+    padding: 5px 12px;
+}
+
+.employeesList table td:first-child {
+    padding-left: 16px;
+}
+
+.employeesList table td:last-child {
+    padding-right: 16px;
+}
+
+.employeesList table tr:hover {
+    box-shadow: 1px 0px 15px #EBE4FF;
+    cursor: default;
 }

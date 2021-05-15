@@ -6,7 +6,7 @@ function Navigation(props) {
         <nav>
             <section className="layers">
                     <span>Слои</span>
-                    <img src={arrowDown} width="8px" height="4px"></img>
+                    <img src={arrowDown} alt="arrow down" width="8px" height="4px"></img>
             </section>
             <section className="links">
                 {

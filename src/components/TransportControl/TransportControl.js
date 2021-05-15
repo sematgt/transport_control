@@ -1,3 +1,4 @@
+import './TransportControl.css';
 import EmployeesList from '../EmployeesList';
 
 function TransportControl(props) {
@@ -7,10 +8,12 @@ function TransportControl(props) {
             <div className="employeeLists">
                 <EmployeesList
                     employeesData={props.drivers}
-                ></EmployeesList>
+                    title="Водители"
+                    ></EmployeesList>
                 <hr></hr>
                 <EmployeesList
                     employeesData={props.conductors}
+                    title="Кондукторы"
                 ></EmployeesList>
             </div>
         </section>
