@@ -1,8 +1,65 @@
 .modalForm {
+    display: flex;
+    flex-direction: column;
     position: fixed;
     left: 50%;
     top: 50%;
     transform: translate(-50%, -50%);
     background-color: #fff;
-    border: 1px solid black;
+    box-shadow: 1px 0px 5px rgba(64, 59, 79, 0.5);
+    padding: 6px 12px;
+}
+
+.modalForm .buttonsPanel {
+    border: none;
+    display: flex;
+    justify-content: space-between;
+}
+
+.modalForm .buttonsPanel input {
+    color: #fff;
+    padding: 6px 12px;
+    margin-bottom: 0;
+    font-size: 14px;
+    font-weight: 300;
+    text-align: center;
+    border: 1px solid transparent;
+    border-radius: 4px;
+}
+
+.modalForm .inputGroup input[type="text"] {
+    text-align: center;
+    width: 240px;
+    font-size: 14px;
+    font-weight: 300;
+    color: #697079;
+    padding: 6px 12px;
+}
+
+.modalForm .buttonsPanel #save {
+    background-color: #3b9879;
+    border-color: #3b9879;    
+}
+
+.modalForm .buttonsPanel #cancel {
+    background-color: #d9534f;
+    border-color: #d43f3a;
+}
+
+.modalForm h2 {
+    font-size: 20px;
+    font-weight: 300;
+    margin-bottom: 18px;
+}
+
+.modalForm .inputGroup {
+    display: flex;
+    justify-content: space-between;
+}
+
+.modalForm .label {
+    border: 0px !important;
+    padding: 3px;
+    font-size: 14px;
+    font-weight: 300;
 }

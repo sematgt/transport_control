@@ -21,6 +21,7 @@ function EmployeesList(props) {
                                 <td className={employee.needsConductor ? "active" : ""}><span>нужен кондуктор</span></td>
                             }
                             <EditPanel
+                                key={employee.id.toString()}
                                 category={props.title}
                                 employeeId={employee.id}
                                 handleEditClick={props.handleEditClick}

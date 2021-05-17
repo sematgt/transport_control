@@ -93,15 +93,19 @@ function App() {
 
   function createEmployee(category, id, data) {
     if (category === 'Водители') {
-      setDrivers(drivers.push({...{
+      let driversData = drivers.slice();
+      driversData.push({...{
         id: id
-      }, ...data}));
+      }, ...data});
+      setDrivers(driversData);
     }
 
     if (category === 'Кондукторы') {
-      setConductors(conductors.push({...{
+      let conductorsData = conductors.slice();
+      conductorsData.push({...{
         id: id
-      }, ...data}));
+      }, ...data});
+      setConductors(conductorsData);
     }
   }
 
@@ -143,21 +147,26 @@ function App() {
 
   function openModal(category, id) {
     setModalIsOpen(true);
-    if (id) {
+    if (id) { // edit
       setCurrentData({
         category,
-        id: getNewId(category),
+        id: id,
         employeeName: getEmployeeDataObj(id).find(employee => employee.id === id).name,
         inVacation: getEmployeeDataObj(id).find(employee => employee.id === id).inVacation,
         needsConductor: getEmployeeDataObj(id).find(employee => employee.id === id).needsConductor 
       });
     }
-    else {
+    else { // add new
       setCurrentData({
         category,
         id: getNewId(category)
       })
     }
+  }
+
+  function closeModal() {
+    setCurrentData({});
+    setModalIsOpen(false);
   }
 
   function handleEditClick(category, id) {
@@ -169,10 +178,21 @@ function App() {
   }
 
   function handleDeleteClick(category, id) {
-    setModalIsOpen(false);
+    closeModal();
     deleteEmployee(category, id);
   }
 
+  function handleFormSubmit(mode, category, id, data) {
+    if (mode === 'add') {
+      createEmployee(category, id, data);
+    }
+
+    if (mode === 'edit') {
+      editEmployee(category, id, data);
+    }
+  }
+
+  // helpers
   function getNewId(category) {
     if (category === 'Водители') {
       return drivers.reduce((maxId, driver) => driver.id > maxId ? driver.id : maxId, 1) + 1;
@@ -196,11 +216,6 @@ function App() {
           data: conductors,
           title: 'Кондукторы'
         }]} 
-        crudHandlers={{
-          create: createEmployee,
-          edit: editEmployee,
-          delete: deleteEmployee
-        }}
         handleEditClick={handleEditClick} 
         handleDeleteClick={handleDeleteClick} 
         handleAddClick={handleAddClick} 
@@ -208,11 +223,13 @@ function App() {
       </TransportControl>
       {
         modalIsOpen && <FormDialog
-          category = {currentData.category || ''}
+          category = {currentData.category}
           employeeName = {currentData.employeeName || ''}
           id = {currentData.id}
           inVacation = {currentData.inVacation || false}
           needsConductor = {currentData.needsConductor || false}
+          handleCloseModal = {closeModal}
+          handleSubmit = {handleFormSubmit}
         ></FormDialog>
       }
     </>
