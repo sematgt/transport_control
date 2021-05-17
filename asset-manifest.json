@@ -1,0 +1,21 @@
+{
+  "files": {
+    "main.css": "/transportControl/static/css/main.27b984c3.chunk.css",
+    "main.js": "/transportControl/static/js/main.85b72702.chunk.js",
+    "main.js.map": "/transportControl/static/js/main.85b72702.chunk.js.map",
+    "runtime-main.js": "/transportControl/static/js/runtime-main.7f5c1a51.js",
+    "runtime-main.js.map": "/transportControl/static/js/runtime-main.7f5c1a51.js.map",
+    "static/js/2.1a33bcad.chunk.js": "/transportControl/static/js/2.1a33bcad.chunk.js",
+    "static/js/2.1a33bcad.chunk.js.map": "/transportControl/static/js/2.1a33bcad.chunk.js.map",
+    "index.html": "/transportControl/index.html",
+    "static/css/main.27b984c3.chunk.css.map": "/transportControl/static/css/main.27b984c3.chunk.css.map",
+    "static/js/2.1a33bcad.chunk.js.LICENSE.txt": "/transportControl/static/js/2.1a33bcad.chunk.js.LICENSE.txt",
+    "static/media/logo.75f9a564.svg": "/transportControl/static/media/logo.75f9a564.svg"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.7f5c1a51.js",
+    "static/js/2.1a33bcad.chunk.js",
+    "static/css/main.27b984c3.chunk.css",
+    "static/js/main.85b72702.chunk.js"
+  ]
+}
